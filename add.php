@@ -6,11 +6,13 @@
 	$sensor = $_GET['ppm'];
 	$sensor2 = $_GET['ppm2'];
 
+	//Mencari row pengaliran yang aktif (status = 1)
 	$sql        =   "SELECT * FROM pengaliran WHERE status= 1 LIMIT 1";
 	$stmt = $PDO->prepare($sql);
 	$stmt->execute();
 	$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
+	//Dapat row pengaliran yang aktif
 	$id_pengaliran = $result['id_pengaliran'];
 	$sensor = $_GET['ppm'];
 	$sensor2 = $_GET['ppm2'];

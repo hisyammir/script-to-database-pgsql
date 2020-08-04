@@ -3,8 +3,8 @@
 	include('koneksi.php');
 	
 	// $id = $_GET['id_pengaliran'];
-	$sensor = $_GET['ppm'];
-	$sensor2 = $_GET['ppm2'];
+	// $sensor = $_GET['ppm'];
+	// $sensor2 = $_GET['ppm2'];
 
 	//Mencari row pengaliran yang aktif (status = 1)
 	$sql        =   "SELECT * FROM pengaliran WHERE status= 1 LIMIT 1";
@@ -25,7 +25,7 @@
 	$stmt->bindParam(':ppm', $sensor);
 	$stmt->bindParam(':ppm2', $sensor2);
 	// execute the insert statement
-	$stmt->execute();
+	// $stmt->execute();
 
 	if($stmt->execute()) {
 		// echo "sukses gaes";
